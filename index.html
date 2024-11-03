@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Summary Generator</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<script src="main.js" type="module" defer></script>
+<script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="header">
+    <h1>summArIze it!</h1>
+    <h2 class="textinfo"> Create short summaries of scientific texts in just a few steps!</h2>
+  </div>
+  <div class = "info">
+    <h3> Have you ever wanted to understand scientific and medical texts but are just not a doctor? </h3> 
+    <h3> You've come to the right place! </h3> 
+  </div>
+
+    <div id="Text" class="tabcontent" >
+      <h4><i class="fa-solid fa-circle-info"></i> Please enter text you wish to have summarized. It might take a moment to generate the summary. For best results, please choose an English text.</h4>
+      <div class="container">
+        <textarea id="long-text-input" placeholder="Enter your text here..."></textarea>
+        <p id="status"></p>
+        <button id="generate-button" disabled>
+          <span class="spinner" id="spinner">🔄</span> Generate Summary
+        </button>
+      
+      <div id="output-div"></div>
+      <div id="abfrage" style="display : none">
+        <h4><i class="fa-solid fa-circle-info"></i> If you are happy with the generated summary, feel free to save as .txt or copy! Otherwise, go ahead and create another summary!</h4>
+      </div>
+     
+      <div id="butcont" >
+      <button class="btn save btn-primary" style="display : none" id="btn-id" >
+        Click here to save as .txt
+      </button>
+      <button class="btn copy btn-primary" style="display : none" id="copy-btn">
+        Click here to copy
+      </button>
+    </div>
+
+    <div id="longer" style="display : none" class="longer">
+    <div id="extra">
+      <h4><i class="fa-solid fa-circle-info"></i> Too short? Click here for a longer summary!</h4>
+      <button class="longerbtn" style="display : none" id="long-btn" >
+        Generate longer Summary
+      </button>
+    </div>
+      <div id="output-div-long"></div>
+      <div id="butcont">
+        <button class="btn save btn-primary" style="display : none" id="save-long-btn" >
+          Click here to save as .txt
+        </button>
+        <button class="btn copy btn-primary" style="display : none" id="copy-long-btn">
+          Click here to copy
+        </button>
+      </div>
+      <div id="extra">
+      <h4><i class="fa-solid fa-circle-info"></i> Too long? Click here for a shorter summary!</h4>
+      <button class="shorterbtn" style="display : none" id="short-btn" >
+        Generate shorter Summary
+      </button>
+      </div>
+      <div id="output-div-short"></div>
+      <div id="butcont">
+        <button class="btn save btn-primary" style="display : none" id="save-short-btn" >
+          Click here to save as .txt
+        </button>
+        <button class="btn copy btn-primary" style="display : none" id="copy-short-btn">
+          Click here to copy
+        </button>
+      </div>
+    </div>
+      </div>
+    </div>
+      
+    <!--<div id="PDF" class="tabcontent">
+      <h4><i class="fa-solid fa-circle-info"></i> If you wish to summarize text from a PDF, please upload here</h4>
+      <form method="post" action="/upload" enctype="multipart/form-data">
+        <input type="file" name="pdf_file" accept=".pdf">
+        <input type="submit" value="Upload">
+    </form>
+    </div>-->
+
+
+    <div id="footer" class="footer">
+    <h5><i class="fa-solid fa-circle-info"></i> If you wish to know more about the model I've used, click <a href="https://huggingface.co/Xenova/distilbart-cnn-6-6" target="_blank">here</a>.</h5>
+    </div>
+
+    <!--js code, der in der eigenen datei nicht funktioniert-->
+    <script>
+      function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+      
+      // Get the element with id="defaultOpen" and click on it
+      document.getElementById("defaultOpen").click();
+
+      
+    </script>
+</body>
+<!--<script src="main.js"></script>-->
+</html>
+
+

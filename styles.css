@@ -1,0 +1,285 @@
+* {box-sizing: border-box}
+
+body {
+  font-family: "Kanit", sans-serif;
+  background-color: #EBE9E1;
+  display: flex;
+  flex-direction: column;
+  /*justify-content: center; das macht hier dass es vertikal mittig ist*/ 
+  align-items: center;
+  min-height: 100vh;
+  /*height: auto;*/
+  margin: 0;
+  padding: 5px;
+  flex:auto;
+}
+
+h1 {
+  flex:1;
+  font-size: 80px;
+  align-self: center;
+  border-radius: 0px;
+  color: #ffffff;
+  background-color: #EFB11D;
+  padding-bottom: 0px;
+}
+
+h2 {
+  flex:1;
+  color: #141D3D;
+  height: auto;
+  margin: 0;
+  padding: 20px;
+  font-size: 80px;
+  align-self: center;
+}
+
+.textinfo{
+  font-size: 200%!important;
+  line-height: 120%!important;
+}
+
+h3 {
+  padding: 1px;
+}
+
+h4 {
+  font-size: 20px;
+  margin-left: 20px;
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 0px;
+  padding-bottom: 5px;
+  width: 80%;
+}
+
+.container {
+  background-color: #ebe9e1;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  /*max-width: 600px;*/
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+textarea {
+  width: 100%;
+  height: auto;
+  min-height: 200px;
+  border-radius: 5px;
+  padding: 15px;
+  font-size: 16px;
+  border: 1px solid #EFB11D;
+  resize: none;
+  font-family: "Kanit", sans-serif;
+  background-color: #EBE9E1;
+  color: #141D3D;
+  align-items: center;
+  display: flex;
+}
+
+h2 {
+  font-family: "Kanit", sans-serif;
+  font-size: 18px;
+}
+
+h3 {
+  font-family: "Kanit", sans-serif;
+  color: #141D3D;
+  margin: 0px;
+  font-size: 24px;
+}
+
+/* Style the tab content */
+.tabcontent {
+  /*display: none;*/
+  padding: 6px 30px 40px 30px;
+  border: 1px solid #ebe9e1ab;
+  border-radius: 5px;
+  border-color: #141D3D;
+  height: auto;
+  min-height: 50vh;
+  width: 80%;
+  background-color: #B2D7E7;
+  color: #141D3D;
+  margin-top: 20px;
+  margin-bottom: 20px;
+} 
+
+.hide {
+  display: none;
+}
+
+.myDIV:hover + .hide {
+  display: block;
+  color: red;
+}
+
+button {
+  display: block;
+  width: 60%;
+  padding: 10px;
+  /*margin: 0px 0;*/
+  background-color: #EFB11D;
+  color: #141D3D;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  margin: auto;
+  font-family: "Kanit", sans-serif;
+}
+
+.btn {
+  display:inline-block ;
+  width: 30%;
+  padding: 10px;
+  margin: 0px 0;
+  background-color: #EFB11D;
+  color: #141D3D;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  text-align: center;
+}
+
+
+.longer button {
+  width: 35%;
+}
+
+.extra {
+ align-items: center;
+ text-align: center;
+
+}
+
+#extra {
+  display: flex;
+  text-align: center;
+  padding-top: 40px;
+}
+
+#butcont {
+  text-align: center;
+}
+
+
+button:hover {
+  background-color: #efb01dc7;
+}
+
+form button{
+  padding: 4px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #e2d0a6a6;
+  cursor: not-allowed;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#spinner {
+  display: none;
+  margin-right: 10px;
+  animation: spin 1s linear infinite;
+}
+
+#spinner.show {
+  display: block;
+}
+
+#output-div {
+  display: none;
+  background-color: #EBE9E1;
+  border: 1px solid #EBE9E1;
+  padding: 30px;
+  border-radius: 5px;
+  font-size: 22px;
+  margin-top: 20px;
+  border-color: #141D3D;
+  border-width: 5px;
+}
+
+#output-div-long {
+  display: none;
+  background-color: #EBE9E1;
+  border: 1px solid #EBE9E1;
+  padding: 30px;
+  border-radius: 5px;
+  font-size: 22px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-color: #141D3D;
+  border-width: 5px;
+}
+
+#output-div-short {
+  display: none;
+  background-color: #EBE9E1;
+  border: 1px solid #EBE9E1;
+  padding: 30px;
+  border-radius: 5px;
+  font-size: 22px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-color: #141D3D;
+  border-width: 5px;
+}
+
+
+#longer {
+  padding: 50px;
+}
+
+button.btn.save::before {
+  font-family: fontAwesome;
+  content: "\f0c7\00a0";
+  /*content: "\f00c\00a0";*/
+}
+
+button.btn.copy::before {
+  font-family: fontAwesome;
+  content: "\f15b\00a0";
+}
+
+/*.info::before {
+  font-family: fontAwesome;
+  content: "\f00e\00a0";
+}
+*/
+
+.info {
+  margin: 10px;
+  margin-top: 0px;;
+  text-align: center;
+  width: 80%;
+}
+
+/*https://astronautweb.co/snippet/font-awesome/*/
+
+#footer {
+  position: static;
+  bottom:0;
+  height:60px;   /* height of the footer */
+  align-items: center;
+  margin-top: 70px;
+}
+
+h5 {
+  font-size: 16px;
+}
