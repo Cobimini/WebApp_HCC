@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Summary Generator</title>
+  <title>Easy Language Medical Summarizer</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 <script src="main.js" type="module" defer></script>
 <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
@@ -31,7 +32,7 @@
         <textarea id="long-text-input" placeholder="Enter your text here..."></textarea>
         <p id="status"></p>
         <button id="generate-button" disabled>
-          <span class="spinner" id="spinner">🔄</span> Generate Summary
+          <span class="fa-solid fa-spinner fa-spin-pulse" id = "spinner"></i></span> Generate Summary
         </button>
       
       <div id="output-div"></div>
@@ -82,43 +83,11 @@
     </div>
       </div>
     </div>
-      
-    <!--<div id="PDF" class="tabcontent">
-      <h4><i class="fa-solid fa-circle-info"></i> If you wish to summarize text from a PDF, please upload here</h4>
-      <form method="post" action="/upload" enctype="multipart/form-data">
-        <input type="file" name="pdf_file" accept=".pdf">
-        <input type="submit" value="Upload">
-    </form>
-    </div>-->
-
+    
 
     <div id="footer" class="footer">
-    <h5><i class="fa-solid fa-circle-info"></i> If you wish to know more about the model I've used, click <a href="https://huggingface.co/Xenova/distilbart-cnn-6-6" target="_blank">here</a>.</h5>
+    <h5><i class="fa-solid fa-circle-info"></i> If you wish to know more about the model I've used, click <a href="https://huggingface.co/Xenova/distilbart-xsum-12-3" target="_blank">here</a>. Interested in the code? Click <a href="https://github.com/Cobimini/WebApp_HCC" target="_blank">here</a>. </h5>
     </div>
 
-    <!--js code, der in der eigenen datei nicht funktioniert-->
-    <script>
-      function openCity(evt, cityName) {
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-          tabcontent[i].style.display = "none";
-        }
-        tablinks = document.getElementsByClassName("tablinks");
-        for (i = 0; i < tablinks.length; i++) {
-          tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
-        document.getElementById(cityName).style.display = "block";
-        evt.currentTarget.className += " active";
-      }
-      
-      // Get the element with id="defaultOpen" and click on it
-      document.getElementById("defaultOpen").click();
-
-      
-    </script>
 </body>
-<!--<script src="main.js"></script>-->
 </html>
-
-
