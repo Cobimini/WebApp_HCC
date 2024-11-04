@@ -22,6 +22,7 @@ h1 {
   color: #ffffff;
   background-color: #EFB11D;
   padding-bottom: 0px;
+  font-family: "Space Mono";
 }
 
 h2 {
@@ -184,7 +185,7 @@ form button{
 }
 
 button:disabled {
-  background-color: #e2d0a6a6;
+  background-color: #e2d0a6e9;
   cursor: not-allowed;
 }
 
@@ -195,12 +196,13 @@ button:disabled {
 
 #spinner {
   display: none;
-  margin-right: 10px;
-  animation: spin 1s linear infinite;
+  
 }
 
 #spinner.show {
   display: block;
+  margin-right: 10px;
+  animation: spin 1s linear infinite;
 }
 
 #output-div {
