@@ -21,7 +21,7 @@ const longer = document.getElementById('longer');
 const longButton = document.getElementById('long-btn');
 const shortButton = document.getElementById('short-btn');
 
-status.textContent = "Loading model...";
+status.textContent = "Loading model...Please wait a moment...";
 saveButton.setAttribute("disabled", true);
 copyButton.setAttribute("disabled", true);
 saveButtonlong.setAttribute("disabled", true);
@@ -37,15 +37,14 @@ let currentMilliseconds = Date.now();
 
 const summarization = await pipeline(
     //'summarization', 'Xenova/bart-large-cnn'
-    'summarization', 'Xenova/distilbart-cnn-6-6'
+    //'summarization', 'Xenova/distilbart-cnn-6-6'
    //'summarization', 'Xenova/distilbart-xsum-6-6'
    //'summarization', 'Xenova/distilbart-xsum-12-3'
    //'summarization', 'Xenova/distilbart-xsum-9-6'
    //'summarization', 'Xenova/distilbart-xsum-12-6'
-   //'summarization', 'Xenova/distilbart-cnn-12-3'
+   'summarization', 'Xenova/distilbart-cnn-12-3'
    //'summarization', 'Xenova/distilbart-cnn-12-6'
    //'summarization', 'Xenova/bart-large-xsum'
-   //"summarization", model="Falconsai/medical_summarization"
 );
 
 status.textContent = "Summarizer is ready";
